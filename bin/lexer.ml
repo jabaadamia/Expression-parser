@@ -18,7 +18,6 @@ type token =
   | GT
   | LEQ
   | GEQ
-  | OEF
 
 
 let is_digit c = '0' <= c && c <= '9' 

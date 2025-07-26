@@ -18,5 +18,4 @@ type token =
   | GT
   | LEQ
   | GEQ
-  | OEF
 val tokenise : char list -> token list

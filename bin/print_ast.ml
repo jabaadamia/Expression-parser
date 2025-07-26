@@ -29,8 +29,8 @@ and string_of_bool_node indent_level = function
   | Neq (e1, e2) -> Printf.sprintf "%sNeq\n%s\n%s" (indent indent_level) (string_of_arithm (indent_level + 1) e1) (string_of_arithm (indent_level + 1) e2)
   | Geq (e1, e2) -> Printf.sprintf "%sGeq\n%s\n%s" (indent indent_level) (string_of_arithm (indent_level + 1) e1) (string_of_arithm (indent_level + 1) e2)
   | Leq (e1, e2) -> Printf.sprintf "%sLeq\n%s\n%s" (indent indent_level) (string_of_arithm (indent_level + 1) e1) (string_of_arithm (indent_level + 1) e2)
-  | Ge (e1, e2) -> Printf.sprintf "%sGe\n%s\n%s" (indent indent_level) (string_of_arithm (indent_level + 1) e1) (string_of_arithm (indent_level + 1) e2)
-  | Le (e1, e2) -> Printf.sprintf "%sLe\n%s\n%s" (indent indent_level) (string_of_arithm (indent_level + 1) e1) (string_of_arithm (indent_level + 1) e2)
+  | Gt (e1, e2) -> Printf.sprintf "%sGt\n%s\n%s" (indent indent_level) (string_of_arithm (indent_level + 1) e1) (string_of_arithm (indent_level + 1) e2)
+  | Lt (e1, e2) -> Printf.sprintf "%sLt\n%s\n%s" (indent indent_level) (string_of_arithm (indent_level + 1) e1) (string_of_arithm (indent_level + 1) e2)
 
 let string_of_expr top_expr =
   match top_expr with

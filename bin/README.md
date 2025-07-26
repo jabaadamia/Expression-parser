@@ -3,7 +3,7 @@ This project is a simple interpreter for a language that supports basic arithmet
 
 Arithmetic Operations: Addition (+), Subtraction (-), Multiplication (*), Division (/).
 
-Integer and Float Literals: e.g., 123, 45.6.
+Integer and Float Literals: e.g., 123, 4.6.
 
 Boolean Logic: true, false, && (and), || (or), ! (not).
 
@@ -37,8 +37,9 @@ dune exec expression_parser
 
 You will see a prompt. Type an expression and press Enter.
 
-Demo output:
+Demo:
 
+expression_parser % dune exec expression_parser
 Enter an expression: (2+2)*4--4 == 20 && !false || 1.5 > 3.0
 
 ---- AST ----
@@ -58,7 +59,7 @@ Or
       Int(20)
     Not
       False
-  Ge
+  Gt
     Float(1.500000)
     Float(3.000000)
 ------

@@ -22,5 +22,5 @@ and bool_expr =
   | Neq of arithm_expr * arithm_expr 
   | Geq of arithm_expr * arithm_expr 
   | Leq of arithm_expr * arithm_expr 
-  | Le of arithm_expr * arithm_expr 
-  | Ge of arithm_expr * arithm_expr
+  | Lt of arithm_expr * arithm_expr 
+  | Gt of arithm_expr * arithm_expr

@@ -49,10 +49,10 @@ and parse_relational_expr_tail tokens =
       (Bool (Neq (unwrap_arith lhs, unwrap_arith rhs)), rest'')
   | GT :: rest' ->
       let rhs, rest'' = parse_additive_expr rest' in
-      (Bool (Ge (unwrap_arith lhs, unwrap_arith rhs)), rest'')
+      (Bool (Gt (unwrap_arith lhs, unwrap_arith rhs)), rest'')
   | LT :: rest' ->
       let rhs, rest'' = parse_additive_expr rest' in
-      (Bool (Le (unwrap_arith lhs, unwrap_arith rhs)), rest'')
+      (Bool (Lt (unwrap_arith lhs, unwrap_arith rhs)), rest'')
   | GEQ :: rest' ->
       let rhs, rest'' = parse_additive_expr rest' in
       (Bool (Geq (unwrap_arith lhs, unwrap_arith rhs)), rest'')
@@ -129,6 +129,5 @@ let build_ast tokens =
   let expr, rest = parse_or_expr tokens in
   match rest with
   | [] -> expr
-  | OEF :: [] -> expr 
   | _ :: _ -> raise (ParseError ("Syntax error: Unexpected token after expression"))
 

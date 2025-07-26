@@ -73,12 +73,12 @@ and eval_bool_expr expr =
      | IntVal i1, IntVal i2 -> BoolVal (i1 <> i2)
      | FloatVal f1, FloatVal f2 -> BoolVal (f1 <> f2)
      | _ -> failwith "Type error: Inequality requires two numbers of the same type")
-  | Ge (a1, a2) ->
+  | Gt (a1, a2) ->
     (match eval_arithm a1, eval_arithm a2 with
     | IntVal i1, IntVal i2 -> BoolVal (i1 > i2)
     | FloatVal f1, FloatVal f2 -> BoolVal (f1 > f2)
     | _ -> failwith "Type error")
-  | Le (a1, a2) ->
+  | Lt (a1, a2) ->
     (match eval_arithm a1, eval_arithm a2 with
     | IntVal i1, IntVal i2 -> BoolVal (i1 < i2)
     | FloatVal f1, FloatVal f2 -> BoolVal (f1 < f2)
