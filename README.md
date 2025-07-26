@@ -23,6 +23,7 @@ OCaml, Dune
 Steps:
 
 ```git clone https://github.com/jabaadamia/Expression-parser```
+```cd expression_parser```
 
 Build the project:
 
