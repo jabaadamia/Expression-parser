@@ -1,0 +1,31 @@
+# Ignore Dune build artifacts
+/_build/
+*.install
+/.merlin
+/.merlin-global
+/.formatted
+
+# Ignore Opam local switch (if using local switch)
+.opam/
+
+# Ignore editor/IDE files
+*.swp
+*.swo
+*.bak
+*~
+.#*
+*.orig
+
+# VSCode
+.vscode/
+
+# Emacs
+*#
+/.emacs.d/
+
+# MacOS metadata
+.DS_Store
+
+# ocaml-lsp server logs (optional)
+*.log
+
