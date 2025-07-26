@@ -1,4 +1,4 @@
 (executable
  (public_name expression_parser)
  (name main)
- (libraries expression_parser))
+ (modules main ast lexer))
